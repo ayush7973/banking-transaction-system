@@ -34,10 +34,11 @@ public class TransactionService {
         }
 
     }
-    private void validateAccount(Account account){
+      private void validateAccount(Account account){
         if(!"Active".equals(account.getStatus())){
             throw new RuntimeException("Account is inactive");
         }
+          
     }
     @Transactional
     public Transaction withdraw(String transactionId,String accountId, BigDecimal amount){
